@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Freckle Face');
+
+$color-bg: #11172a;
+$color-ketchup: #e64d49;
+$color-moutarde: #e4b525;
+$color-light: #fafafa;
+
+%radius {
+  border-radius: 10px;
+  overflow: hidden;
+}
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, .font-freckle {
+  font-family: 'Freckle Face', sans-serif;
+}
+
+#app {
+  height: 100%;
+  background: $color-bg;
+  display: flex;
+
+  main {
+    @extend %flex-col;
+    margin: auto;
+    
+    img {
+      margin: auto auto 30px;
+      width: 200px;
+    }
+  }
+  
+  .content {
+    display: flex;
+    @extend %radius;
+
+    section {
+      @extend %flex-col;
+      width: 250px;
+      color: $color-light;
+      padding: 15px;
+
+      > * {
+        margin: auto;
+      }
+      &.ketchup {
+        background: $color-ketchup;
+      }
+      &.moutarde {
+        background: $color-moutarde;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+    
+    &-result {
+      text-align: center;
+      font-size: 4em;
+    }
+
+    &-controls {
+      @extend %radius;
+      display: flex;
+
+      button {
+        outline: none;
+        border: none;
+        background: #4d4d4dab;
+        color: $color-light;
+        font-size: 2em;
+        padding: 0 8px;
+        margin: 0;
+
+        &:nth-child(1) {
+          background: #4d4d4d2f;
+        }
+      }
+    }
+  }
+}
+

@@ -1,5 +1,5 @@
 {
-  "name": "projet",
+  "name": "08-atelier-hotdot-quiz",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "sass": "^1.57.1",
-    "svelte": "^3.54.0",
-    "vite": "^4.0.0"
+    "svelte": "^3.49.0",
+    "vite": "^3.0.0"
   }
 }
